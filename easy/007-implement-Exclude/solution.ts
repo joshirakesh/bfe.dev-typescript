@@ -31,3 +31,11 @@ type A = MyExclude<Foo, 'a'>; // Expected: 'b' | 'c'
 type B = MyExclude<Foo, 'c'>; // Expected: 'a' | 'b'
 type C = MyExclude<Foo, 'c' | 'd'>; // Expected: 'a' | 'b'
 type D = MyExclude<Foo, 'a' | 'b' | 'c'>; // Expected: never
+
+/**
+ * `export {}` is used here to ensure this file is treated as a module.
+ * When a file is treated as a module, top-level variables, classes, 
+ * interfaces, or functions are scoped to the file instead of the global scope.
+ * This helps to avoid conflicts with variables of the same name in different files.
+ */
+export { };

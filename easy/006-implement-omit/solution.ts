@@ -25,3 +25,5 @@ type Foo = {
 type A = MyOmit<Foo, 'a' | 'b'>; // Expected: {c: boolean}
 type B = MyOmit<Foo, 'c'>; // Expected: {a: string, b: number}
 type C = MyOmit<Foo, 'c' | 'd'>; // Expected: {a: string, b: number}
+
+export { };
