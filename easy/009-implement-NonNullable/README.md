@@ -12,5 +12,12 @@ Here's how `MyNonNullable<T>` should behave:
 
 ```typescript
 type Foo = 'a' | 'b' | null | undefined;
+```
 
+### Expected Results:
+
+Here are the expected outcomes:
+
+```typescript
 type A = MyNonNullable<Foo>; // Expected: 'a' | 'b'
+```
